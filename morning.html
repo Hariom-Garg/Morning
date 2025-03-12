@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good Morning, Disha!</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background-color: #222;
+            color: #fff;
+            padding: 50px;
+        }
+        .loading-bar {
+            width: 100%;
+            background-color: #444;
+            height: 10px;
+            border-radius: 5px;
+            margin: 20px auto;
+            overflow: hidden;
+        }
+        .progress {
+            height: 100%;
+            width: 0;
+            background-color: #ffcc00;
+            animation: load 3s linear forwards;
+        }
+        @keyframes load {
+            0% { width: 0; }
+            100% { width: 100%; }
+        }
+        .error {
+            font-size: 18px;
+            color: #ff5555;
+            display: none;
+            margin-top: 20px;
+        }
+        .btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #222;
+            background-color: #ffcc00;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>System Booting Up… 🔄</h2>
+    <p>📍 Location: Duniya ki sabse amazing ladki ke phone par</p>
+    <p>💡 Task: Ek super energetic, full-of-smile morning start karwana</p>
+
+    <div class="loading-bar">
+        <div class="progress"></div>
+    </div>
+
+    <p class="error">⚠️ Error: Morning Activation Failed! ⚠️</p>
+    <p class="error">Reason: Disha ne ab tak ek **pyaari si smile** nahi di! 🚨</p>
+
+    <button class="btn" onclick="activateMorning()">😊 Tap to Continue Your Awesome Day!</button>
+
+    <script>
+        setTimeout(() => {
+            document.querySelectorAll('.error').forEach(el => el.style.display = 'block');
+            document.querySelector('.btn').style.display = 'inline-block';
+        }, 3000);
+
+        function activateMorning() {
+            alert('Yay! System Activated. Good Morning, Disha! ☀️');
+        }
+    </script>
+
+</body>
+</html>
